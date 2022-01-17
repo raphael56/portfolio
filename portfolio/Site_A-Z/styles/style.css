@@ -1,0 +1,108 @@
+*, ::before, ::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px;
+  margin: 0;
+}
+
+body {
+  font-family: nunito sans, sans serif;
+}
+
+/* navigation */
+nav {
+  position: fixed;
+  height: 70px;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#333), to(#626262));
+  background: linear-gradient(to bottom, #333, #626262);
+  z-index: 10;
+}
+
+.logo-menu {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 50px;
+  z-index: 25;
+  display: none;
+}
+
+.liste-nav {
+  height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#333), to(#626262));
+  background: linear-gradient(to bottom, #333, #626262);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+  z-index: 20;
+}
+
+.item-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.item-nav a {
+  list-style-type: none;
+  color: #F1F1F1;
+  text-decoration: none;
+  font-size: 22px;
+  padding: 0 25px 0 0;
+  text-transform: uppercase;
+}
+
+.item-nav a:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  height: 2px;
+  width: 0%;
+  background: #F1F1F1;
+  -webkit-transition: width 0.2s ease-in-out;
+  transition: width 0.2s ease-in-out;
+}
+
+.item-nav a:hover::after {
+  width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  .logo-menu {
+    display: block;
+  }
+  .liste-nav {
+    padding-top: 70px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    position: relative;
+    display: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(#333), to(#626262));
+    background: linear-gradient(to bottom, #333, #626262);
+  }
+  .liste-nav.active {
+    display: block;
+  }
+  .item-nav {
+    height: 70px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */

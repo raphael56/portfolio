@@ -1,0 +1,55 @@
+//premier bloc
+.bloc1 {
+    //configuration du bloc1
+    // positionnement sur la grille de 4 colonnes par 5 lignes des trois div img+name+dev
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    font-size: 7rem;
+    font-weight: 900;
+    color: $colour-accent;
+    margin: 2rem $layout-margin ($layout-margin) $layout-margin;
+    border-radius: 15px;
+    & img {
+        display: ;
+        width: 100%;
+    }
+    &__1 {
+        display: flex;
+        flex-direction: column;
+        //configuration du bloc1__1 signature +image yoda
+        // signature Raphaël HERVIEUX
+        width: 40%;
+        margin-left: 175px;
+        //background-color: crimson;
+        & img {
+            // image yoda
+            width: 80%;
+            border-radius: 50%;
+            background: $colour-white;
+            border: solid 1px $colour-white;
+            &:hover {
+                background: $colour-chocolate;
+            }
+        }
+        & h2 {
+            margin-bottom: 8rem;
+            font-family: Allura-Regular, Helvetica, sans-serif;
+            letter-spacing: 0px;
+            text-align: center;
+            font-size: 4rem;
+            ;
+        }
+    }
+    &__2 {
+        //dev web
+        width: 60%;
+        background-color: rgba(128, 128, 128, 0.1);
+        & strong {
+            @include StrongTxt;
+        }
+    }
+}
+
+.bloc2 {}

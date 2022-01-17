@@ -1,0 +1,312 @@
+@font-face { /*police utilisée pour l'écriture manuscrite*/
+    font-family: 'alex_brushregular';
+    src: url('fonts/alexbrush-regular-webfont.woff2') format('woff2'),
+    url('fonts/alexbrush-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'advent_proregular';
+    src: url('fonts/adventpro-regular-webfont.woff2') format('woff2'),
+    url('fonts/adventpro-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.secret{/* faire disparaitre des blocks*/
+    display:none;
+}
+
+#main_wrapper
+{ /*permet de fixer les dimensions de la page*/
+    width: 75%;
+    margin: auto;
+    /*border: dashed darkred;*/
+}
+/*------------média queries---------*/
+@media all and (max-width: 1024px)
+    /*Pour tous les types d'écrans,
+    si la largeur de la fenêtre ne dépasse pas 1 024 px,
+    alors exécuter les règles CSS suivantes*/
+{
+    #main_wrapper
+    {
+        width: auto;
+    }
+}
+@media all and (max-width: 1024px)
+{
+    nav
+    {
+        width: auto;
+        text-align: left;
+    }
+
+    nav ul
+    {
+        flex-direction: column;
+        z-index: 1;
+    }
+    #modjo
+    {
+        /*display:none;*/
+        font-size: medium;
+    }
+    div #titre_principal
+    {
+        display: none;
+    }
+    div #mon_nom
+    {
+        font-size: large;
+    }
+}
+/*----------------------------parties principales ------------------------------*/
+body{
+    background-color: rgba(255, 250, 250,0.5);
+    background-image: url("content/image/background.jpg");
+    font-family: advent_proregular, Arial, sans-serif;
+    color: #091d73;
+}
+section h1,div h1, nav h1{
+    font-family:advent_proregular, Arial, sans-serif;
+    font-weight: normal;
+    text-transform:lowercase;
+}
+#mon_nom{
+    font-family: alex_brushregular, sans-serif;
+    color: #232340;
+    font-size: xxx-large;
+    box-shadow: #aeabab;
+}
+#mon_nom:hover{
+    color: darkred;
+}
+#modjo{
+    color: #690404;
+    position: absolute;
+    bottom: 0;
+}
+header{
+    position: relative;
+   /* width: 74%;*/
+    height: 22%;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+   /* border: solid green;*/
+    background-color: rgba(255, 250, 250,0.5);
+    background-image: url("content/image/triangle_haut.png");
+    background-repeat: no-repeat;
+    border-radius:10px;
+    box-shadow: 10px 10px 10px #404040;
+    color: snow;
+    z-index: 1;
+}
+.dashed{
+    margin:15px;
+}
+#pitch{
+    margin: 20px;
+    padding: 0 40px 0 40px ;
+}
+.fonction{
+    background-color: #404040;
+    border-radius: 10px;
+    color:snow;
+}
+#pitch:hover{
+    background-color: rgb(10, 2, 91,0.5);
+    color:snow;
+    border-radius: 60px 0 30px 0;
+}
+#pitch h1{
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+}
+#pitch p{
+    font-size: x-large;
+}
+#experience ul li:hover {
+    background-color: #43b3a2;
+    border-radius: 10px;
+    font-size: 16px;
+}
+.formationTitre{
+    font-size: large;
+    color: red;
+}
+#logo_de_page{
+    display:flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+#titre_principal{
+    display: flex;
+    flex-direction: row;
+    font-size: medium;
+    color: black;
+}
+
+#logo{
+    border-radius:50px;
+    height:100px;
+    box-shadow: 5px 5px 5px gray ;
+}
+nav {
+    font-size: smaller;
+    color: darkred;
+}
+nav ul{
+    list-style-type: none;
+}
+/*structure des liens*/
+a{ /*texte non survolé*/
+    text-decoration:none;
+    color: black;
+    font-style: normal;
+}
+a:hover{/* texte survolé*/
+    text-decoration: underline;
+    color: #091d73;
+}
+#formation ul{
+    list-style-type: none;
+}
+#formation ul li:hover{
+    background-color: #b39241;
+    border-radius: 10px;
+    font-size: 16px;
+    color: snow;
+}
+
+/*structure du corps de cv*/
+section {
+    display:flex;
+    flex-direction:row-reverse;
+}
+#colonne_droite{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+}
+section #colonne_droite ol, ul{
+    text-align: justify;
+
+}
+#colonne_gauche{
+    margin-top: 20px;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    text-align: center;
+    width: 600px;
+    align-items: center;
+    background-color: rgb(200, 198, 198,0.4);
+}
+#colonne_gauche:hover{
+    background-color:transparent;
+}
+section #colonne_gauche ol,ul {
+    text-align: justify;
+}
+#dev_web{
+    font-family: advent_proregular,advent_proregular, Arial, sans-serif;
+}
+#dev_web:hover{
+    color: chocolate;
+    font-size:1.3em;
+}
+#photo_portrait{
+    /* padding-bottom: 1200px;*/
+    filter: grayscale(95%);
+    margin-top: 15px;
+    height:350px;
+    border-radius:10px 10px 10px 0;
+}
+#photo_portrait:hover{
+    filter:grayscale(10%);
+    border-radius: 50%;
+}
+#experience:hover {
+    background-color: rgba(233, 230, 230, 0.5);
+    border-radius: 15px;
+}
+#experience ul{
+    list-style-type: none;
+}
+.ecriture_bleue{
+    font-weight: bold;
+    font-size: larger;
+}
+.fonction{
+    font-style: normal;
+    font-size: 20px;
+    padding-left: 10px;
+}
+.fonction:hover{
+    font-size:larger;
+    color:white;
+    text-align: center;
+}
+.descriptionFonction{
+    font-style: italic;
+    font-size: large;
+}
+#aventure ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    margin: auto;
+}
+#aventure ul li:nth-child(1){
+    background-color: #aeabab;
+}
+#formation:hover{
+    background-color: rgba(214, 198, 165, 0.5);
+    border-radius: 15px;
+}
+#kerguelen{
+    background-color: #480202;
+    border-radius: 10px;
+}
+
+/*----------------------------------------------------*/
+/*partie gestion de la presentation profil*/
+
+/*----------------------------------------------------*/
+
+/*----------------footer------------------------------------*/
+footer{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url("content/image/triangle_bas.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding-bottom: 40px;
+    padding-top: 10px;
+}
+footer div{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /*border: dashed gray;*/
+    /*border-radius: 10px;*/
+}
+footer div div{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
