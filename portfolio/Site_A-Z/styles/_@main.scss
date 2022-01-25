@@ -87,6 +87,15 @@ nav{
     background-size: cover;
     border-bottom: 1px dotted #777;
     padding-top: 1px;
+    h1{
+        text-align: center;
+        font-size: 100px;
+        text-shadow: 0 0 10px #000;
+        margin-top:10px;
+        color: #f1f1f1;
+        font-family: Merienda, sans-serif;
+
+    }
 }
 
 .logo-kyoto{
@@ -95,14 +104,7 @@ nav{
     display: block;
 margin: 150px auto 0;
 }
-.accueil h1{
-    text-align: center;
-    font-size: 100px;
-    text-shadow: 0 0 10px #000;
-    margin-top:10px;
-    color: #f1f1f1;
-    font-family: Merienda, sans-serif;
-}
+
 .sous-titre{
     text-align: center;
     font-size: 25px;font-weight: bold;
@@ -125,23 +127,24 @@ margin: 150px auto 0;
     text-decoration: none;
     margin: 30px auto 0;
     transition: all 0.2s ease-in-out;
+    &:hover{
+        background: rgb(177,0,36);
+        color:#fff;
+    }
 }
-.btn-accueil:hover{
-    background: rgb(177,0,36);
-    color:#fff;
-}
+
 @media screen and (max-width:850px){
     .accueil{
         height:650px;
         min-height: auto;
         background-position: right;
+            h1{
+                font-size: 23px;
+            }
     }
     .logo-kyoto{
         margin:120px auto 0;
 
-    }
-    .accueil h1{
-        font-size: 23px;
     }
     .btn-accueil{
         width:150px;
@@ -149,6 +152,9 @@ margin: 150px auto 0;
         line-height: 50px;
         font-size: 18px;
         margin: 15px auto 0;
+        h1{
+            font-size: 35px;
+        }
     }
 }
 
@@ -162,9 +168,6 @@ margin: 150px auto 0;
         width: 150px;
         margin:110px auto 0;
 
-    }
-    .accueil h1{
-        font-size: 35px;
     }
 
     .sous-titre{
@@ -187,16 +190,16 @@ margin: 150px auto 0;
     display: grid;
     grid-template: 200px repeat(3,auto) /1fr 600px 1fr;
     background: #F1F1F1;
-}
-.section-asymetrique h2{
-    grid-area: 1/1/2/-1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #333;
-    font-size: 50px;
-    text-transform: uppercase;
-    padding-bottom: 20px;
+    h2{
+        grid-area: 1/1/2/-1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #333;
+        font-size: 50px;
+        text-transform: uppercase;
+        padding-bottom: 20px;
+    }
 }
 
 // placement
@@ -223,6 +226,19 @@ margin: 150px auto 0;
     border-radius: 2px;
     height: 750px;
     margin-bottom: 250px;
+    button{
+        border-radius: 9999px;
+        outline: none;
+        border: none;
+        background: crimson;
+        border: 1px solid #333;
+        color: #f1f1f1;
+        padding: 20px 35px;
+        font-size:20px;
+        margin: 35px auto;
+        cursor: pointer;
+        display: block;
+    }
 }
 
 .img-grid{
@@ -253,22 +269,16 @@ margin: 150px auto 0;
     padding:15px;
 }
 
-.bloc button{
-    border-radius: 9999px;
-    outline: none;
-    border: none;
-    background: crimson;
-    border: 1px solid #333;
-    color: #f1f1f1;
-    padding: 20px 35px;
-    font-size:20px;
-    margin: 35px auto;
-    cursor: pointer;
-    display: block;
-}
 
 .bloc-right{
     right:-300px;
+    h3{
+        position: relative;
+        font-size: 35px;
+        margin: 30px 15px;}
+        p{
+            line-height:40px;
+            padding:15px;}
 }
 .img-grid-2{
     top:130px;
@@ -280,16 +290,7 @@ margin: 150px auto 0;
     width: 50%;
     height: 100%;
 }
-.bloc-txt-right h3{
-    position: relative;
-    font-size: 35px;
-    margin: 30px 15px;
-}
 
-.bloc-txt-right p{
-    line-height:40px;
-    padding:15px;
-}
 // lignes verticales
 
 
@@ -309,10 +310,10 @@ margin: 150px auto 0;
 @media screen and (max-width: 1200px){
     .section-asymetrique{
             grid-template:200px repeat (6, auto) 100px /1fr 600px 1fr;
-    }
-    .section-asymetrique h2{
-        font-size: 50px;
-        padding-bottom:0px;
+            h2{
+                font-size: 50px;
+                padding-bottom:0px;
+            }
     }
     .bloc-1{
         grid-area: 2/2/3/3;
@@ -374,7 +375,7 @@ margin: 150px auto 0;
         width: 100%;
         height: 100%;
     }
-    .bloc-txt-lefth3, 
+    .bloc-txt-left h3, 
     .bloc-txt-right h3{
         text-align: center;
     }
@@ -435,16 +436,16 @@ margin: 150px auto 0;
     justify-content: center;
     align-items: center;
     flex-direction:column;
+    p{
+        font-size: 65px;
+        color: #f1f1f1;
+    }
+    span{
+        display:block;
+        color: #f1f1f1;
+    }
 }
 
-.parallax p{
-    font-size: 65px;
-    color: #f1f1f1;
-}
-.parallax span{
-    display:block;
-    color: #f1f1f1;
-}
 
 @media screen and(max-width:400px) {
     .parallax p {
@@ -459,19 +460,19 @@ margin: 150px auto 0;
 .section-tarifs{
     padding-bottom: 150px;
     border-bottom: 1px dashed #333;
+    h3{
+        text-align: center;
+        font-size: 45px;
+        margin:  120px 0 20px;
+        padding:0 30px;
+    }
+    hr{
+        width:200px;
+        margin:20px auto 100px;
+    }
 
 }
-.section-tarifs h3{
-    text-align: center;
-    font-size: 45px;
-    margin:  120px 0 20px;
-    padding:0 30px;
 
-}
-.section-tarifs hr{
-    width:200px;
-    margin:20px auto 100px;
-}
 .container-tarifs{
     display:flex;
     justify-content:center;
@@ -589,25 +590,23 @@ margin: 150px auto 0;
 .form-group{
     position: relative;
     margin-bottom: 45px;
-
-}
-.form-group label{
-    color:#aaa;
-    font-size: 20px;
-}
-
-.form-group input{
-    display: block;
-    width: 100%;
-    outline: none;
-    padding: 10px 0px;
-    border: none;
-    background: none;
-    border-bottom: 3px solid #aaa;
-    color: #666;
-    font-size: 20px;
-
-
+    label{
+        color:#aaa;
+        font-size: 20px;
+    }
+    input{
+        display: block;
+        width: 100%;
+        outline: none;
+        padding: 10px 0px;
+        border: none;
+        background: none;
+        border-bottom: 3px solid #aaa;
+        color: #666;
+        font-size: 20px;
+    
+    
+    }
 }
 
 textarea{
