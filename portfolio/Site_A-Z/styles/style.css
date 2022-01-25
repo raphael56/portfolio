@@ -538,4 +538,129 @@ nav {
     font-size: 55px;
   }
 }
+
+.section-tarifs {
+  padding-bottom: 150px;
+  border-bottom: 1px dashed #333;
+}
+
+.section-tarifs h3 {
+  text-align: center;
+  font-size: 45px;
+  margin: 120px 0 20px;
+  padding: 0 30px;
+}
+
+.section-tarifs hr {
+  width: 200px;
+  margin: 20px auto 100px;
+}
+
+.container-tarifs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.cartes-tarifs {
+  width: 350px;
+  height: auto;
+  border-radius: 5px;
+  margin: 15px 15px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.cartes-tarifs:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.cartes-tarifs h4 {
+  text-align: center;
+  padding: 25px 20px;
+  font-size: 35px;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 80%, 0 100%);
+          clip-path: polygon(0 0, 100% 0%, 100% 80%, 0 100%);
+  background: #ffaff1;
+}
+
+.cartes-tarifs span {
+  display: block;
+  text-align: center;
+  padding: 15px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.cartes-tarifs:nth-child(2) h4 {
+  background: #FF5073;
+}
+
+.cartes-tarifs:nth-child(3) h4 {
+  background: #ff0033;
+}
+
+.cartes-tarifs p {
+  font-size: 18px;
+  text-align: center;
+  padding: 20px 10px;
+  border-top: 1px solid #c2c5c2;
+  font-weight: bold;
+}
+
+.cartes-tarifs:last-of-type p {
+  border-bottom: 1px solid #c2c5c2;
+}
+
+.cartes-tarifs p:nth-child(odd) {
+  background: rgba(195, 195, 195, 0.219);
+}
+
+.cartes-tarifs a {
+  display: block;
+  text-decoration: none;
+  border: 1px solid #333;
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  border-radius: 9999px;
+  color: #333;
+  line-height: 50px;
+  margin: 20px auto;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.cartes-tarifs a:hover {
+  background: #333;
+  color: #f1f1f1;
+}
+
+@media screen and (max-width: 900px) {
+  .section-tarifs h3 {
+    font-size: 35px;
+    margin: 80px 0 80px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .section-tarifs h3 {
+    font-size: 30px;
+    padding: 0 10px;
+    margin: 50px 0;
+  }
+  .sections-tarifs hr {
+    width: 200px;
+    margin: 20px auto 20px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
