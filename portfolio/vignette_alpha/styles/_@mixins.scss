@@ -1,0 +1,29 @@
+@mixin linear($i,$j){
+    background: linear-gradient(to bottom,$i,$j);
+}
+
+@mixin disflex{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+@mixin wihei ($x:100%,$y:100%){
+    width:$x;
+    height:$y;
+}
+
+@mixin a_nu{
+    list-style-type: none;
+    color:$blanc;
+    text-decoration: none;
+}
+@mixin _after_underline_nav_survol{
+        content:"";
+        display:block;
+        margin: 0 auto;
+        height:2px;
+        width: 0%;
+        background: $blanc;
+        transition: width 0.2s ease-in-out;
+    }
