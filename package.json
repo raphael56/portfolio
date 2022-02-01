@@ -1,4 +1,21 @@
 {
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raphael56/portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raphael56/portfolio/issues"
+  },
+  "homepage": "https://github.com/raphael56/portfolio#readme",
   "dependencies": {
     "bulma": "^0.9.3"
   }
