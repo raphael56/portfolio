@@ -53,29 +53,29 @@
         is-medium
         is-large
     -->
-            <nav class="" role="navigation" aria-label="pagination">
+            <nav class="pagination is-rounded is-centered" role="navigation" aria-label="pagination">
 
-                    <ul class="">
+                    <ul class="pagination-list">
                       <li>
-                        <a class="" aria-label="Goto page 1">1</a>
+                        <a class="pagination-link" aria-label="Goto page 1">1</a>
                       </li>
                       <li>
-                        <span class="">&hellip;</span>
+                        <span class="pagination-ellipsis">&hellip;</span>
                       </li>
                       <li>
-                        <a class="" aria-label="Goto page 45">45</a>
+                        <a class="pagination-link" aria-label="Goto page 45">45</a>
                       </li>
                       <li>
-                        <a class="" aria-label="Page 46" aria-current="page">46</a>
+                        <a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a>
                       </li>
                       <li>
-                        <a class="" aria-label="Goto page 47">47</a>
+                        <a class="pagination-link" aria-label="Goto page 47">47</a>
                       </li>
                       <li>
-                        <span class="">&hellip;</span>
+                        <span class="pagination-ellipsis">&hellip;</span>
                       </li>
                       <li>
-                        <a class="" aria-label="Goto page 86">86</a>
+                        <a class="pagination-link" aria-label="Goto page 86">86</a>
                       </li>
                     </ul>
                   </nav>
@@ -96,34 +96,34 @@
     <html class="has-navbar-fixed-top">
  -->
 
-<nav class="" role="navigation" aria-label="main navigation">
-        <div class="">
-          <a class="" href="https://bulma.io">
+<nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="https://bulma.io">
             <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
           </a>
           <!-- Hamburger -->
           <!-- is-active pour le transformer en croix -->
-          <a  id="icone" role="button" class=" " aria-label="menu" aria-expanded="false" data-target="Navmenu">
+          <a  id="icone" role="button" class="navbar-burger burger " aria-label="menu" aria-expanded="false" data-target="Navmenu">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
           </a>
         </div>
       
-        <div id="Navmenu" class="">
-          <div class="">
-            <a class="">
+        <div id="Navmenu" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item">
               Home
             </a>
       
-            <a class="">
+            <a class="navbar-item">
               Documentation
             </a>
       
           </div>
       
-          <div class="">
-            <div class="">
+          <div class="navbar-end">
+            <div class="navbar-item">
               
               <!-- Buttons permet de faire un groupe de boutons. -->
               <div class="buttons">
@@ -141,7 +141,13 @@
 
 
 <script>
+var menu = document.getElementById('Navmenu');
+var icone= document.getElementById('icone');
 
+icone.addEventListener('click', function(){
+  icone.classList.toggle('is-active');
+  menu.classList.toggle('is-active');
+})
 </script>
 
 

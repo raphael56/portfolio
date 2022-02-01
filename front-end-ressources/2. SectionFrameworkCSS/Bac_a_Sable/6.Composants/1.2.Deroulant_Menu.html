@@ -23,10 +23,10 @@
                         <a href="1.2.Deroulant&Menu.html" class="button is-danger is-medium">Deroulant&Menu</a>
                     </div>
                     <div class="column is-narrow">
-                        <a href="1.3.Message&Modale.html" class="button is-danger is-medium">Message&Modale</a>
+                        <a href="1.3.Message_Modale.html" class="button is-danger is-medium">Message&Modale</a>
                     </div>
                     <div class="column is-narrow">
-                        <a href="1.4.Nav&Pagination.html" class="button is-danger is-medium">Nav&Pagination</a>
+                        <a href="1.4.Nav_Pagination.html" class="button is-danger is-medium">Nav&Pagination</a>
                     </div>
                     <div class="column is-narrow">
                         <a href="1.5.Onglets.html" class="button is-danger is-medium">Onglets</a>
@@ -54,8 +54,8 @@
  -->
 <h4 class="title is-4">Dropdown:</h4>
 
-<div class="" id="drop">
-    <div class="">
+<div class="dropdown" id="drop">
+    <div class="dropdown-trigger">
       <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
         <span>Dropdown button</span>
         <span class="icon is-small">
@@ -63,22 +63,22 @@
         </span>
       </button>
     </div>
-    <div class="" id="dropdown-menu" role="menu">
+    <div class="dropdown-menu" id="dropdown-menu" role="menu">
       <div class="">
-        <a href="#" class="">
+        <a href="#" class="dropdown-item ">
           Dropdown item
         </a>
-        <a class="">
+        <a href="#" class="dropdown-item ">
           Other dropdown item
         </a>
-        <a href="#" class=" is-active">
+        <a href="#" class=" dropdown-item is-active">
           Active dropdown item
         </a>
-        <a href="#" class="">
+        <a href="#" class="dropdown-item ">
           Other dropdown item
         </a>
         <hr class="dropdown-divider">
-        <a href="#" class="">
+        <a href="#" class="dropdown-item ">
           With a divider
         </a>
       </div>
@@ -89,21 +89,21 @@
   <br><br><br><br>
   <h4 class="title is-4">Menu:</h4>
   <br>
-  <aside class="">
-      <p class="">
+  <aside class="menu">
+      <p class="menu-label">
         General
       </p>
-      <ul class="">
+      <ul class="menu-list">
         <li><a>Dashboard</a></li>
         <li><a>Customers</a></li>
       </ul>
-      <p class="">
+      <p class="menu-label">
         Administration
       </p>
-      <ul class="">
+      <ul class="menu-list ">
         <li><a>Team Settings</a></li>
         <li>
-          <a class="">Manage Your Team</a>
+          <a class="is-active">Manage Your Team</a>
           <ul>
             <li><a>Members</a></li>
             <li><a>Plugins</a></li>
@@ -130,7 +130,10 @@
 </div>
 
 <script>
-
+var drop= document.getElementById('drop');
+drop.addEventListener('click', function(){
+  drop.classList.toggle('is-active')
+})
 </script>
 <br><br><br><br><br><br>
 <br><br><br><br><br><br>

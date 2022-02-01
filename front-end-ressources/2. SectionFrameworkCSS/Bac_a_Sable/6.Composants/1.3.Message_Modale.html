@@ -26,7 +26,7 @@
                         <a href="1.3.Message&Modale.html" class="button is-danger is-medium">Message&Modale</a>
                     </div>
                     <div class="column is-narrow">
-                        <a href="1.4.Nav&Pagination.html" class="button is-danger is-medium">Nav&Pagination</a>
+                        <a href="1.4.Nav_Pagination.html" class="button is-danger is-medium">Nav&Pagination</a>
                     </div>
                     <div class="column is-narrow">
                         <a href="1.5.Onglets.html" class="button is-danger is-medium">Onglets</a>
@@ -46,12 +46,12 @@
 <br><br>
 <h4 class="title is-3">Message : </h4>
 
-<article class=" is-primary">
-    <div class="">
+<article class="message is-primary">
+    <div class="message-header">
       <p>Primary</p>
       <button class="delete" aria-label="delete"></button>
     </div>
-    <div class="">
+    <div class="message-body">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac
   </article>
 
@@ -63,17 +63,17 @@
   <div class="box" id="mod">Clique moi</div>
 
   <!-- Modale -->
-  <div class="" id="content">
-      <div class=""></div>
-      <div class="">
-        <header class="">
-          <p class="">Modal title</p>
+  <div class="modal" id="content">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Modal title</p>
           <button id="sup" class="delete" aria-label="close"></button>
         </header>
-        <section class="">
+        <section class="modal-card-body">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi et repudiandae ad officia enim porro hic totam magnam dolores? Rem!</p>
         </section>
-        <footer class="">
+        <footer class="modal-card-foot">
           <button class="button is-success">Save changes</button>
           <button class="button">Cancel</button>
         </footer>
@@ -84,7 +84,15 @@
 </div>
 
 <script>
-   
+   var mod=document.getElementById('mod');
+   var sup =document.getElementById('sup');
+   var content= document.getElementById('content');
+   mod.addEventListener('click', function(){
+     content.classList.toggle('is-active');
+   })
+   sup.addEventListener('click', function(){
+     content.classList.toggle('is-active');
+   })
 </script>
 
 <br><br><br><br><br><br>
