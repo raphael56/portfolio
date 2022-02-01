@@ -550,11 +550,18 @@ font-size: 1.9rem;
     margin: 10px;
     overflow: hidden;
     flex-shrink: 0;
+    border-radius: 5px;
 
 }
 .item-galerie img{
     width: 100%;
     height: auto;
+    border-radius: 5px;
+
+}
+.item-galerie a{
+
+
 }
 /**************************************************************************************/
 /*************************************** contact ***********************************/
