@@ -9,9 +9,33 @@
 <body>
     <form>
 
-        <input type="text" name="" id="">
+        <!-- <input type="text">
+        <input type="email">
+        <input type="password">
+        <input type="search">
+        <input type="tel">
+        <input type="url">
+        <input type="date">
+        <input type="month">
+        <input type="number" min="0" max="50" step="10"> -->
+        <input id="rangeInp" type="range" min="0" max="50" step="10">
+      
 
+
+        <button>Envoyer</button>
+        <p id="resultat"> 50</p>
 
     </form>
+    <script>
+let resultat = document.getElementById('resultat')
+let rangeInp = document.getElementById('rangeInp')
+
+rangeInp.oninput = function() {
+    resultat.textContent = rangeInp.value;
+}
+
+
+
+    </script>
 </body>
 </html>
