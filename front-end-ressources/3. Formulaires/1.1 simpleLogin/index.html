@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Basique</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="boxLogin">
+      <div class="containerLogo">
+        <div class="cercle"><img src="logo.svg" alt="logo" /></div>
+      </div>
+      <div class="containerInputs">
+        <form action="">
+          <input
+            type="text"
+            required
+            maxlength="16"
+            placeholder="utilisateur"
+          />
+          <input
+            type="password"
+            required
+            maxlength="16"
+            placeholder="mot de passe"
+          />
+          <button>Connexion</button>
+          <p class="txtFin" >Pas encore inscrit ?<a href="#">
+              inscrivez-vous
+            </a></p>
+          
+        </form>
+      </div>
+    </div>
+  </body>
 </html>

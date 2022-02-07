@@ -6,9 +6,35 @@
     <title>Validation</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<style>
+input:invalid{
+    border : 1px solid red
+}
+input:valid{
+    border : 1px solid green
+}
 
+
+</style>
 <body>
  
+
+    <form >
+<input type="text" id="inpTxt" required pattern="[A-Z]+">
+<input type="text" id="inpTxt" required pattern="[0-9A-Z]{6,}">
+<button>valider</button>
+
+
+
+    </form>
+    <script>
+
+const monInp = document.getElementById('inpTxt');
+
+    monInp.setCustomValidity('Mon message perso');
+
+
+    </script>
     
 </body>
 </html>
