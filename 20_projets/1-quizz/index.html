@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <title>Quizz</title>
+    <script
+    defer
+    src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+  ></script>
+</head>
+<body>
+    
+<!-- 1- creer l'interface
+2- styliser le tout
+3- récupérer les données au clic
+4- comparer les résultats
+5- Afficher les phrases en fonction des résultats
+6- Changer la couleur des blocs + animation en fonction des réusltas -->
+
+<div class="section-globale">
+    <h1>Quizz Culture générale</h1>
+    <div class="container-questions">
+
+        <!-- question I -->
+        <div class="container-question container-question-1">
+            <h4 class="titre-question titre-question1">Question1</h4>
+            <div class="input">
+                <input type="radio" id="answer-I-1" value="réponse1" name="answer-I-1"> <label for="answer-I-1">réponse1</label>
+            </div>
+            <div class="input">
+                <input type="radio" id="answer-I-2" value="réponse2" name="answer-I-1"> <label for="answer-I-2">réponse2</label>
+            </div>
+            <div class="input">
+                <input type="radio" id="answer-I-3" value="réponse3" name="answer-I-1"> <label for="answer-I-3">réponse3</label>
+            </div>
+        </div>
+        
+        
+        <!-- question II -->
+        <div class="container-question container-question-2">
+            <h4 class="titre-question titre-question2">Question2</h4>
+            <div class="input">
+                <input type="radio" id="answer-II-1" value="réponse1" name="answer-II-1"> <label for="answer-II-1">réponse1</label>
+            </div>
+            <div class="input">
+                <input type="radio" id="answer-II-2" value="réponse2" name="answer-II-1"> <label for="answer-II-2">réponse2</label>
+            </div>
+            <div class="input">
+                <input type="radio" id="answer-II-3" value="réponse3" name="answer-II-1"> <label for="answer-II-3">réponse3</label>
+            </div>
+        </div>
+        
+        <!-- question III -->
+
+        <div class="container-question container-question-3">
+            <h4 class="titre-question titre-question3">Question3</h4>
+            <div class="input">
+                <input type="radio" id="answer-III-1" value="réponse1" name="answer-III-1"> <label for="answer-III-1">réponse1</label>
+            </div>
+            <div class="input">
+                <input type="radio" id="answer-III-2" value="réponse2" name="answer-III-1"> <label for="answer-III-2">réponse2</label>
+            </div>
+            <div class="input">
+                <input type="radio" id="answer-III-3" value="réponse3" name="answer-III-1"> <label for="answer-III-3">réponse3</label>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="app.js"></script>
+</body>
+</html>
