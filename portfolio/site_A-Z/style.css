@@ -24,6 +24,7 @@ body {
   left: 0;
   border-right: 1px dashed dashed #f1f1f1;
   z-index: 5;
+  transition: all 0.2s ease-in-out;
 }
 
 .blocs-menu {
@@ -97,8 +98,21 @@ body {
 }
 @media screen and (max-width: 1300px) {
   .nav-gauche {
-    display: none;
+    left: -300px!important;
+    width: 250px;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
+  .menu-visible{
+      left: 0px!important;
+  }
+.blocs-menu:nth-child(1), .blocs-menu:nth-child(7){
+display:none;
+}
+
   .btn-rond-menu {
     width: 70px;
     height: 70px;
