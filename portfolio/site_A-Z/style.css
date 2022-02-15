@@ -98,7 +98,7 @@ body {
 }
 @media screen and (max-width: 1300px) {
   .nav-gauche {
-    left: -300px!important;
+    left: -300px !important;
     width: 250px;
     min-height: 300px;
     display: flex;
@@ -106,12 +106,13 @@ body {
     align-items: center;
     flex-direction: column;
   }
-  .menu-visible{
-      left: 0px!important;
+  .menu-visible {
+    left: 0px !important;
   }
-.blocs-menu:nth-child(1), .blocs-menu:nth-child(7){
-display:none;
-}
+  .blocs-menu:nth-child(1),
+  .blocs-menu:nth-child(7) {
+    display: none;
+  }
 
   .btn-rond-menu {
     width: 70px;
@@ -133,46 +134,264 @@ display:none;
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  .ligne-unique{
-      width: 100%;
-      height: 4px;
-      border-radius: 5px;
-      background: #f1f1f1;
-      position: absolute;
-      top: 50%;
-      left:50%;
-      transform: translate(-50%, -50%);
+  .ligne-unique {
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+    background: #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
-  .ligne-unique::before{
-      content:'';
-      width: 100%;
-      height: 4px;
-      border-radius: 5px;
-      background: #f1f1f1;
-      position: absolute;
-      bottom: 10px;
+  .ligne-unique::before {
+    content: "";
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+    background: #f1f1f1;
+    position: absolute;
+    bottom: 10px;
   }
-  .ligne-unique::after{
-      content:'';
-      width: 100%;
-      height: 4px;
-      border-radius: 5px;
-      background: #f1f1f1;
-      position: absolute;
-      top:10px;
+  .ligne-unique::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+    background: #f1f1f1;
+    position: absolute;
+    top: 10px;
   }
-  .cont-ligne.active .ligne-unique::after{
-top:0;
-transform: rotate(45deg);
-transition: top 300ms ease, transform 300ms 300ms ease;
-}
-.cont-ligne.active .ligne-unique::before{
-    bottom:0;
+  .cont-ligne.active .ligne-unique::after {
+    top: 0;
+    transform: rotate(45deg);
+    transition: top 300ms ease, transform 300ms 300ms ease;
+  }
+  .cont-ligne.active .ligne-unique::before {
+    bottom: 0;
     transform: rotate(-45deg);
     transition: bottom 300ms ease, transform 300ms 300ms ease;
-    
   }
-  .cont-ligne.active .ligne-unique{
-      background: transparent;
+  .cont-ligne.active .ligne-unique {
+    background: transparent;
   }
+}
+
+/* ----------accueil ----------- */
+.accueil {
+  background: url(ressources/accueil.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  height: 100vh;
+  min-height: 900px;
+  width: calc(100% - 300px);
+  position: relative;
+  margin-left: auto;
+}
+h1 {
+  font-size: 90px;
+  font-family: "Abril Fatface", sans-serif;
+  margin: 0 60px;
+  padding-top: 210px;
+}
+.txt-animation {
+  font-size: 30px;
+  margin: 10px 0 10px 60px;
+}
+.btn-acc {
+  display: inline-flex;
+  width: 200px;
+  height: 50px;
+  text-decoration: none;
+  background: #000;
+  justify-content: center;
+  align-items: center;
+  color: #f1f1f1;
+  margin: 10px 0 0 0;
+  border-radius: 2px;
+  font-size: 18px;
+}
+.btn-acc1 {
+  margin: 10px 0 0 60px;
+}
+.btn-acc2 {
+  background: transparent;
+  border: 2px solid black;
+  color: black;
+  font-weight: 700;
+}
+.medias {
+  display: flex;
+  margin-left: 60px;
+  margin-top: 30px;
+}
+.media {
+  width: 60px;
+  height: 60px;
+  background: #333;
+  border-radius: 50%;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.media2 {
+  background: transparent;
+  border: 2px solid #333;
+}
+.icone-medias {
+  width: 30px;
+}
+.btn-rond-menu {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 0 0 0 #333;
+  background: #333;
+  animation: pulse 1.3s infinite;
+}
+@keyframes pulse {
+  to {
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.01);
+  }
+}
+.logo-rond-btn-acc {
+  width: 35px;
+}
+/* media accueil */
+@media screen and (max-width: 1300px) {
+  .accueil {
+    width: 100%;
+    background-position: center;
+    z-index: 0;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .accueil {
+    min-height: 0;
+  }
+  h1 {
+    font-size: 70px;
+    margin: 0 30px 0 30px;
+    padding-top: 100px;
+  }
+  .accueil p {
+    margin: 20px 0 20px 30px;
+  }
+  .btn-acc1 {
+    margin: 10px 0 0 30px;
+  }
+  .medias {
+    margin-left: 30px;
+  }
+  .btn-rond {
+    display: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .accueil {
+    height: 600px;
+  }
+  h1 {
+    font-size: 50px;
+    margin: 0 30px;
+  }
+  .accueil p {
+    font-size: 20px;
+  }
+  .btn-rond-menu {
+    height: 60px;
+  }
+}
+@media screen and (max-width: 700px) {
+  h1 {
+    font-size: 35px;
+  }
+  .accueil p {
+    font-size: 16px;
+  }
+  .btn-acc {
+    width: 120px;
+    height: 40px;
+    font-size: 13px;
+    margin: 10px 0 0 5px;
+  }
+  .btn-acc1 {
+    margin: 10px 0 0 30px;
+  }
+  .media {
+    width: 40px;
+    height: 40px;
+  }
+  .icone-medias {
+    width: 20px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+    .btn-rond-menu {
+        width: 50px;
+        height: 50px;
+    }
+    .cont-ligne {
+        width: 20px;
+        height: 38px;
+    }
+    .ligne-unique {
+        height: 3px;
+    }
+    .ligne-unique::before {
+        bottom: 8px;
+        height: 3px;
+    }
+    .ligne-unique::after {
+        top: 8px;
+        height: 3px;
+    }
+    .accueil {
+        height: 500px;
+    }
+    h1 {
+        margin: 0 30px 0 5px;
+        padding-top: 120px;
+    }
+    .accueil p {
+        margin: 30px 0 0 5px;
+    }
+    .btn-acc {
+        width: 100px;
+        font-size: 12px;
+        height: 35px;
+        margin: 30px 0 0 5px;
+    }
+    .medias {
+        margin-top: 30px;
+        margin-left: 5px;
+    }
+    .icone-medias {
+        width: 20px;
+    }
+    .txt-animation{
+        font-size: 17px!important;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .txt-animation{
+        font-size: 14px!important;
+    }
+}
+@media screen and (max-width: 370px) {
+    .txt-animation{
+        font-size: 11px!important;
+    }
 }
