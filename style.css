@@ -3,7 +3,10 @@
     margin: 0;
     padding: 0;
 }
-
+html {
+    scroll-behavior: smooth;
+  }
+  
 body{
     background: linear-gradient(to right, #F1F1F1,#636652);
     font-family:'Yaldevi', sans-serif;
